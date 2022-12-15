@@ -112,9 +112,9 @@ Libro.findByIdAndRemove('639ae336ee9a861117c4c1b3').then(resultado => {
 Libro.findByIdAndUpdate('639ae336ee9a861117c4c1b2',{
     $set: {precio: 30}},{new: true}).then(resultado => {
         console.log("Precio actualizado exitosamente: ",resultado);
-}).catch(error => {
+    }).catch(error => {
         console.log("Error al actualizar el precio", error);
-});
+    });
 
 
 /****************************** 3.8 EJERCICIO 8 (opcional) *********************************/
@@ -122,6 +122,6 @@ Libro.findByIdAndUpdate('639ae336ee9a861117c4c1b2',{
 Libro.findByIdAndUpdate('639ae336ee9a861117c4c1b2',{
     $set: {precio: 40}, $inc: {__v: 1}},{new: true}).then(resultado => {
         console.log("Precio y versión actualizados exitosamente: ",resultado);
-}).catch(error => {
+    }).catch(error => {
         console.log("Error al actualizar el precio o la versión", error);
-});
+    });
