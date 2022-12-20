@@ -14,6 +14,6 @@ app.get('/fecha',(req,res) => {
 
 //http://localhost:8080/usuario
 app.get('/usuario',(req,res) => {
-    const usuario = os.hostname();
+    const usuario = os.userInfo().username;
     res.send(`Usuario conectado ${usuario}`);
 });
