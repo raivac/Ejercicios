@@ -14,7 +14,8 @@ const autores = require(__dirname + '/routes/autores');
 
 //Conexion a la BD
 mongoose.Promise = global.Promise;
-mongoose.set('strictQuery', false);
+mongoose.connect('mongodb://localhost:27017/libros');
+mongoose.set('strictQuery', true);
 
 let app = express();
 
